@@ -2,5 +2,5 @@ npm -f i react-scripts
 npm -f i react-router-dom
 npm -f i axios
 npm -f i react-icons --save
-npm -f i react-simple-chatbot
-npm -f i styled-components
+npm -f i react-table
+npm install reactstrap react react-dom
