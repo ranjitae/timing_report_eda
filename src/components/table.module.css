@@ -1,0 +1,143 @@
+
+:root {
+  --primary: #ffffff;
+}
+
+
+/* Table design */
+table {
+  font-size: 12px;
+  border-radius: 5px ;
+  border: none;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color:white;
+  border: 1px solid black;
+  /* table-layout: auto; */
+  
+}
+
+td, th {
+  border-right: 1px solid rgb(7, 6, 6);
+  text-align: left;
+  padding: 8px;
+}
+td{
+  font-size: 12px;
+  color: rgb(7, 6, 6);
+}
+thead th{
+ color: #ffffff;
+ background: #1A2929;
+}
+
+tr:nth-child(even) {
+  background: #9edfd3;
+  background-color: var(--primary);
+  color: rgb(7, 6, 6);
+}
+
+
+/* Checkbox style */
+
+.cb{
+  margin: 4px;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.cb label {
+  float: left; 
+ 
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.cb label span {
+  text-align: center;
+  background-color: #f7f8fb;
+  display: block;
+  padding: 5px 15px;
+  font-size: 12px;
+}
+
+.cb label input {
+  position: absolute;
+  display: none;
+  color: #fff
+}
+/* selects all of the text within the input element and changes the color of the text */
+.cb label input + span{color: #fff;}
+
+
+/* This will declare how a selected input will look giving generic properties */
+.cb input:checked + span {
+    color: #ffffff;
+    text-shadow: 0 0  6px rgba(0, 0, 0, 0.8);
+}
+.action input:checked + span{
+  background-color: var(--primary);
+ 
+}
+
+
+@media(max-width :767px){
+  table{
+    display: block;
+    width: 100%;
+  }
+  thead,tbody,thead th{
+    display: block;
+  }
+  thead th:last-child{
+    border-bottom: none;
+  }
+  thead{
+    float: left;
+  }
+  tbody{
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  td,th{
+    padding: 20px .625em .625em .625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  thead th{
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+  tbody tr{
+    display: table-cell;
+  }
+  tbody tr:nth-child(odd){
+    background: none;
+  }
+  tr:nth-child(even){
+    background: transparent;
+  }
+  tr td:nth-child(odd){
+    background: #f8f8f8;
+    border-right: 1px solid #1A2929;
+  }
+  tr td:nth-child(even){
+    background-color: #9edfd3;
+    border-right: 1px solid #1A2929;
+  }
+  tbody td{
+    display: block;
+    text-align: center;
+  }
+}
